@@ -8,7 +8,7 @@ package instituto.modelo;
 
 /**
  *
- * @author juanpchica
+ * @author hugo c
  */
 public class Persona {
     private String nombre,identidad;

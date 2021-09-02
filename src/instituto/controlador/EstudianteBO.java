@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author juanpchica
+ * @author hugo
  */
 public class EstudianteBO {
     private EstudianteDao estudianteDao;
