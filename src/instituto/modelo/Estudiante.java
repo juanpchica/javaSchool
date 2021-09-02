@@ -9,36 +9,21 @@ package instituto.modelo;
  *
  * @author Hugo C
  */
-public class Estudiante {
+public class Estudiante extends Persona {
     private double[] notas;
-    private String nombre,identidad;
-    private int estrato;
-    protected int edad;
     private boolean tieneDescuento,yaTieneDescuento,internacional = false;
     private double promedio,valorDescontado;
-    
-    public Estudiante(String nombre, int edad, int estrato,String identidad) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.estrato = estrato;
-        this.identidad = identidad;
-        
-    }
 
+    public Estudiante(String nombre, int edad, int estrato, String identidad) {
+        super(nombre, edad, estrato, identidad);
+    }
+    
     public boolean isInternacional() {
         return internacional;
     }
 
     public void setInternacional(boolean internacional) {
         this.internacional = internacional;
-    }
-
-    public String getIdentidad() {
-        return identidad;
-    }
-
-    public void setIdentidad(String identidad) {
-        this.identidad = identidad;
     }
     
     public double getPromedio() {
@@ -71,31 +56,6 @@ public class Estudiante {
 
     public void setNotas(double[] notas) {
         this.notas = notas;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public int getEstrato() {
-        return estrato;
-    }
-
-    public void setEstrato(int estrato) {
-        this.estrato = estrato;
     }
     
     public void calcularPromedio() {
