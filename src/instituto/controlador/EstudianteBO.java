@@ -91,7 +91,6 @@ public class EstudianteBO {
             return "Nota3 no es un valor valido";
         }
         
-        
         //Luego de validar creo el estudiante con sus datos y ejecuto sus calculos
         Estudiante estudiante;
         estudiante = (internacional) ? (new Estudiante(nombre, Integer.parseInt(edad), Integer.parseInt(estrato), identificacion)):new EstudianteInternacional(nombre, Integer.parseInt(edad), Integer.parseInt(estrato), identificacion);

@@ -48,6 +48,7 @@ public class EstudianteDao implements IDAO{
         ResultSet result = conexion.get("select e.*,d.valorDescontado from estudiantes e LEFT OUTER JOIN descuentos d on e.id = d.idEstudiante ORDER BY e.id");
         try {
             if(result.next()){
+                result.beforeFirst();
                 while(result.next()){
                     estudiante = new Estudiante(result.getString("nombre"),result.getInt("edad"),result.getInt("estrato"),result.getString("identidad"));
                     estudiante.setNotas(new double[]{result.getDouble("nota1"),result.getDouble("nota2"),result.getDouble("nota3")});
